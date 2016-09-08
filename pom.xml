@@ -11,14 +11,14 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-loadmask</artifactId>
-    <version>0.4</version>
+    <version>0.4-SNAPSHOT</version>
     <name>jquery-loadmask</name>
     <description>WebJar for jquery-loadmask</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.url>https://github.com/serg472/jquery-loadmask/archive/v${version.unsnapshot}.zip</upstream.url>
+        <upstream.url>https://github.com/serg472/jquery-loadmask/archive/${version.unsnapshot}.zip</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
@@ -76,7 +76,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
                                 <echo message="moving resources"/>
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}/bin"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${version.unsnapshot}/src"/>
                                 </move>
                             </target>
                         </configuration>
